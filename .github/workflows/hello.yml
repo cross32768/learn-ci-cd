@@ -1,9 +1,9 @@
 name: Hello
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 jobs:
   hello:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - run: |
           echo "Hello, world!"
           tree -a .
