@@ -4,5 +4,15 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: actor
-        run: echo "actor - $ {{ github.actor }}"
+      - name: run_id
+        run: echo "run_id=${{ github.run_id }}"
+      - name: head_ref
+        run: echo "head_ref=${{ github.head_ref }}"
+      - name: workspace
+        run: echo "workspace=${{ github.workspace }}"
+      - name: repository
+        run: echo "repository=${{ github.repository }}"
+      - name: repository_owner
+        run: echo "repository_owner=${{ github.repository_owner }}"
+      - name: event
+        run: echo "event=${{ github.event }}"
