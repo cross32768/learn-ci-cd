@@ -2,17 +2,18 @@ name: Contexts
 on: push
 jobs:
   print:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: run_id
-        run: echo "run_id=${{ github.run_id }}"
-      - name: head_ref
-        run: echo "head_ref=${{ github.head_ref }}"
-      - name: workspace
-        run: echo "workspace=${{ github.workspace }}"
-      - name: repository
-        run: echo "repository=${{ github.repository }}"
-      - name: repository_owner
-        run: echo "repository_owner=${{ github.repository_owner }}"
-      - name: event
-        run: echo "event=${{ github.event }}"
+      - name: runner-name
+        run: echo "runner-name: ${{ runner.name }}"
+      - name: runner-os
+        run: echo "runner-os: ${{ runner.os }}"
+      - name: runner-arch
+        run: echo "runner-arch: ${{ runner.arch }}"
+      - name: runner-temp
+        run: echo "runner-temp: ${{ runner.temp }}"
+      - name: runner-tool-cache
+        run: echo "runner-tool-cache: ${{ runner.tool_cache }}"
+      - name: runner-debug
+        run: echo "runner-debug: ${{ runner.debug }}"
+
