@@ -5,15 +5,14 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: runner-name
-        run: echo "runner-name: ${{ runner.name }}"
+        run: echo "runner-name ${{ runner.name }}"
       - name: runner-os
-        run: echo "runner-os: ${{ runner.os }}"
+        run: echo "runner-os ${{ runner.os }}"
       - name: runner-arch
-        run: echo "runner-arch: ${{ runner.arch }}"
+        run: echo "runner-arch ${{ runner.arch }}"
       - name: runner-temp
-        run: echo "runner-temp: ${{ runner.temp }}"
+        run: echo "runner-temp ${{ runner.temp }}"
       - name: runner-tool-cache
-        run: echo "runner-tool-cache: ${{ runner.tool_cache }}"
+        run: echo "runner-tool-cache ${{ runner.tool_cache }}"
       - name: runner-debug
-        run: echo "runner-debug: ${{ runner.debug }}"
-
+        run: echo "runner-debug ${{ runner.debug }}"
